@@ -1,102 +1,66 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://127.0.0.1:5500/javascript-basics/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>rock, paper, scissors!</title>
-  <!--script src="fundamentals-part1.js"></script-->
-  <!--script src="fundamentals-part2.js"></script-->
-  <!--script src="fizzbuzz.js"></script-->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>rock, paper, scissors</title>
 
   <script src="rockpaperscissors.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 
-  
+
 </head>
-<body data-new-gr-c-s-check-loaded="14.1016.0" data-gr-ext-installed="">
-    <div id="title-div">
-      <h1 id="game-name">Rock, Paper, Scissors!</h1>
-      <div class="msg"> <!-- make this pop out and disappear when clicked on-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-       
-    </div>
 
+<body>
 
-    <div class="screen-div"> <!-- the screen div-->
-      <div class="player-div"> <!-- div that will have player components-->
-        <div class="player choice"> <!-- where the icons will slide to for player-->
-          <h1>remove me later</h1>
-        </div>
-        <div class="icon-div"> <!-- where the options are held-->
-          <img id="rock" src="./rock, paper, scissors!_files/rock-hands.png" alt="rock" width="90" height="90" onclick="playerPlay()">
-          <img id="paper" src="./rock, paper, scissors!_files/paper-hands.png" alt="paper" width="90" height="90" onclick="playerPlay()">
-          <img id="scissors" src="./rock, paper, scissors!_files/scissor-hands.png" alt="scissors" width="90" height="90" onclick="playerPlay()">
-        </div>
-      </div>
+  <h1 id="game-name">rock, paper, scissors</h1>
 
-      <div class="comp-div"> <!-- div that will have computer components -->
-        <div class="comp choice"> <!-- where the icons will slide to for computer-->
-          <h1>remove me later</h1>
-        </div>
-        <div class="icon-div"> <!-- where the options are held-->
-          <img src="./rock, paper, scissors!_files/rock-hands.png" alt="rock" width="90" height="90">
-          <img src="./rock, paper, scissors!_files/paper-hands.png" alt="paper" width="90" height="90">
-          <img src="./rock, paper, scissors!_files/scissor-hands.png" alt="scissors" width="90" height="90">
-        </div>
+  <div class="score-div">
+    <h1 id='player-score' class='score' style='display: inline'>Player: 0</h1>
+    <h1 id="comp-score" class='score' style='display: inline'>Computer: 0</h1>
+  </div>
 
+  <div class="screen-div">
+    <div class="player-div">
+      <div class="player choice">
+        <img id="player-rock" class="animate__animated animate__backInLeft" src="images/rock-hands.png" alt="rock"
+          width="200" height="200" style="display: none">
+        <img id="player-paper" class="animate__animated animate__backInLeft" src="images/paper-hands.png" alt="paper"
+          width="200" height="200" style="display: none">
+        <img id="player-scissors" class="animate__animated animate__backInLeft" src="images/scissor-hands.png"
+          alt="scissors" width="200" height="200" style="display: none">
       </div>
     </div>
 
-    <div class="score-div">
-      
+    <div class="comp-div">
+      <!-- div that will have computer components -->
+      <div class="comp choice">
+        <!-- where the icons will slide to for computer-->
+        <img id="comp-rock" class="animate__animated animate__backInRight" src="images/rock-hands.png" alt="rock"
+          width="200" height="200" style="display: none">
+        <img id="comp-paper" class="animate__animated animate__backInRight" src="images/paper-hands.png" alt="paper"
+          width="200" height="200" style="display: none">
+        <img id="comp-scissors" class="animate__animated animate__backInRight" src="images/scissor-hands.png"
+          alt="scissors" width="200" height="200" style="display: none">
+      </div>
+
+
     </div>
+  </div>
 
+  <div class="icon-div">
+    <img id="rock" src="images/rock-hands.png" alt="rock" width="60" height="60" onclick="rps()">
+    <img id="paper" src="images/paper-hands.png" alt="paper" width="60" height="60" onclick="rps()">
+    <img id="scissors" src="images/scissor-hands.png" alt="scissors" width="60" height="60" onclick="rps()">
+  </div>
 
+</body>
 
-<!-- Code injected by live-server -->
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-
-<!--
-NOTES:
-- https://www.color-hex.com/color-palette/19843
-- adjust the widths and heights according to screen size
---></body></html>
+</html>

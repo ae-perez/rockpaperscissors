@@ -1,113 +1,84 @@
 body {
-    background-color: #4c69f6;
-    color: #5D5D5D;
-}
-
-#title-div {
-    margin: auto;
-    width: 80%;
-    padding: 10px;
+  background-color: #4c69f6;
+  color: #5d5d5d;
+  margin: auto;
+  width: 50%;
 }
 
 p {
-    font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Neue', cursive;
 }
 
 #game-name {
-    font-family: 'Bangers', cursive;
-    color: #5D5D5D;
-    font-size: 90px;
-    animation: pulse 5s, glow 5s infinite;
-}
-
-.msg {
-    background-color: white;
-    position: absolute;
-    display: none; /*change back to flex once js is complete*/
-    align-items: center;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    z-index: 1;
-    margin: auto;
-    width: 400px;
-    height: 200px;
-    border-radius: 30px;
-    border: 10px solid #f6db35;
-    text-align: center;
-    
-    
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  animation: pulse 5s, glow 15s infinite;
 }
 
 .screen-div {
-    /*background-color: cadetblue; remove*/
-    display: flex;
-    height: 600px;
-    
-    
+  background-color: white;
+  display: flex;
+  margin: auto;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+  color: white;
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
 }
 
-.choice {
-    background-color: white;
-    border-radius: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: 60%;
-
-}
-
-.player-div, .comp-div {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-/*.player-div {
-    background-color: chartreuse; /*remove   
-}
+.player-div,
 .comp-div {
-    background-color: coral; /*remove
-}*/
+  /* -- having issues -- */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
 
 .icon-div {
-    /*background-color: black; remove*/
-    margin-top: 25px;
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
+  display: flex;
+  margin: auto;
+  padding-top: 30px;
+  justify-content: space-evenly;
 }
 
-img:hover {
-    box-shadow: 5px 5px 10px #ee5454;
-    border-radius: 50%;
-    width: 95px;
-    height: 95px;
+.score-div {
+  text-align: center;
+  margin: 30px;
 }
+
+.score {
+  margin: 100px;
+  color: black;
+  font-size: 25px;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  box-shadow: 5px 5px 10px #ee5454;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
 /*--------------------------------------------------------------*/
 
 @keyframes pulse {
-    0% {
-      color: #4c69f6;
-    }
-    100% {
-      color: #5D5D5D;
-    }
+  0% {
+    color: #4c69f6;
   }
-
-@keyframes glow {
-    50% {text-shadow: 5px 5px 10px #ffc510;}
+  100% {
+    color: #5d5d5d;
+  }
 }
 
-
-/*
-NOTES:
--- see what classes have the same attributes and group them together
-*/
+@keyframes glow {
+  50% {
+    text-shadow: 5px 5px 10px #ffc510;
+  }
+}
