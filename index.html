@@ -22,50 +22,54 @@
 
 <body>
 
-  <h1 id="game-name">rock, paper, scissors</h1>
-
-  <div class="score-div">
-    <h1 id='player-score' class='score' style='display: inline'>Player: 0</h1>
-    <h1 id="comp-score" class='score' style='display: inline'>Computer: 0</h1>
-  </div>
-
-  <div class="screen-div">
-    <div class="player-div">
-      <div class="player choice">
-        <img id="player-rock" class="animate__animated animate__backInLeft" src="images/rock-hands.png" alt="rock"
-          width="200" height="200" style="display: none">
-        <img id="player-paper" class="animate__animated animate__backInLeft" src="images/paper-hands.png" alt="paper"
-          width="200" height="200" style="display: none">
-        <img id="player-scissors" class="animate__animated animate__backInLeft" src="images/scissor-hands.png"
-          alt="scissors" width="200" height="200" style="display: none">
+  <div class="content">
+      <h1 id="game-name">rock, paper, scissors</h1>
+      
+      <div class="score-div">
+        <h1 id='player-score' class='score' style='display: inline'>Player: 0</h1>
+        <h1 id="comp-score" class='score' style='display: inline'>Computer: 0</h1>
       </div>
-    </div>
-
-    <div class="comp-div">
-      <!-- div that will have computer components -->
-      <div class="comp choice">
-        <!-- where the icons will slide to for computer-->
-        <img id="comp-rock" class="animate__animated animate__backInRight" src="images/rock-hands.png" alt="rock"
-          width="200" height="200" style="display: none">
-        <img id="comp-paper" class="animate__animated animate__backInRight" src="images/paper-hands.png" alt="paper"
-          width="200" height="200" style="display: none">
-        <img id="comp-scissors" class="animate__animated animate__backInRight" src="images/scissor-hands.png"
-          alt="scissors" width="200" height="200" style="display: none">
+      
+      <div class="screen-div">
+        <div class="player-div">
+          <div class="player choice">
+            <img id="player-rock" class="animate__animated animate__backInLeft" src="images/rock-hands.png" alt="rock"
+              width="200" height="200" style="display: none">
+            <img id="player-paper" class="animate__animated animate__backInLeft" src="images/paper-hands.png" alt="paper"
+              width="200" height="200" style="display: none">
+            <img id="player-scissors" class="animate__animated animate__backInLeft" src="images/scissor-hands.png"
+              alt="scissors" width="200" height="200" style="display: none">
+          </div>
+        </div>
+      
+        <div class="comp-div">
+          <!-- div that will have computer components -->
+          <div class="comp choice">
+            <!-- where the icons will slide to for computer-->
+            <img id="comp-rock" class="animate__animated animate__backInRight" src="images/rock-hands.png" alt="rock"
+              width="200" height="200" style="display: none">
+            <img id="comp-paper" class="animate__animated animate__backInRight" src="images/paper-hands.png" alt="paper"
+              width="200" height="200" style="display: none">
+            <img id="comp-scissors" class="animate__animated animate__backInRight" src="images/scissor-hands.png"
+              alt="scissors" width="200" height="200" style="display: none">
+          </div>
+      
+      
+        </div>
+      </div>
+      
+      <div class="icon-div">
+        <img id="rock" src="images/rock-hands.png" alt="rock" width="60" height="60" onclick="rps()">
+        <img id="paper" src="images/paper-hands.png" alt="paper" width="60" height="60" onclick="rps()">
+        <img id="scissors" src="images/scissor-hands.png" alt="scissors" width="60" height="60" onclick="rps()">
+      </div>
+      
+      <div class="container">
+        <a href="#" class="btn">play again</a>
       </div>
 
-
-    </div>
   </div>
 
-  <div class="icon-div">
-    <img id="rock" src="images/rock-hands.png" alt="rock" width="60" height="60" onclick="rps()">
-    <img id="paper" src="images/paper-hands.png" alt="paper" width="60" height="60" onclick="rps()">
-    <img id="scissors" src="images/scissor-hands.png" alt="scissors" width="60" height="60" onclick="rps()">
-  </div>
-
-  <div class="container">
-    <a href="#" class="btn">play again</a>
-  </div>
 
 
 

@@ -3,6 +3,14 @@ body {
   color: #5d5d5d;
   margin: auto;
   width: 50%;
+  height: 50%;
+}
+
+.content {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+  left: 25%;
 }
 
 p {
