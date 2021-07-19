@@ -61,6 +61,18 @@ function playRound(pSelection, cSelection) {
     console.log('Draw!');
     score = 'draw';
   }
+
+  if (playerScore == 5) {
+    document.getElementById('player-score').innerHTML = 'PLAYER WINS!';
+    document.getElementById('comp-score').style.display = 'none';
+  } else if (computerScore == 5) {
+    document.getElementById('comp-score').innerHTML = 'COMPUTER WINS!';
+    document.getElementById('player-score').style.display = 'none';
+  }
+
+  console.log(
+    `this is players score: ${playerScore} and this is computers score: ${computerScore}`
+  );
 }
 
 function computerPlay() {
@@ -117,4 +129,22 @@ function rps() {
     var playerSelection = 'scissors';
     game(playerSelection);
   };
+}
+
+function reset() {
+  //clear screen first
+  document.getElementById(previousPlayerMove).style.display = 'none';
+  document.getElementById(previousComputerMove).style.display = 'none';
+
+  //reset scores
+  document.getElementById('player-score').style.display = 'inline';
+  document.getElementById('player-score').innerHTML = 'Player: 0';
+  document.getElementById('comp-score').style.display = 'inline';
+  document.getElementById('comp-score').innerHTML = 'Computer: 0';
+
+  //reset values
+  previousPlayerMove = 'empty';
+  previousComputerMove = 'empty';
+  playerScore = 0;
+  computerScore = 0;
 }

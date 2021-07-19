@@ -3,22 +3,10 @@ body {
   color: #5d5d5d;
   margin: auto;
   width: 50%;
-  height: 50%;
-}
-
-.content {
-  position: absolute;
-  top: 50px;
-  right: 25%;
-  left: 25%;
-}
-
-p {
-  font-family: 'Comic Neue', cursive;
 }
 
 #game-name {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'VT323', monospace;
   text-align: center;
   color: black;
   font-size: 50px;
@@ -63,6 +51,7 @@ p {
   margin: 100px;
   color: black;
   font-size: 25px;
+  font-family: 'VT323', monospace;
 }
 
 #rock:hover,
@@ -72,10 +61,6 @@ p {
   border-radius: 50%;
   width: 55px;
   height: 55px;
-}
-
-.container {
-  margin-top: 40px;
 }
 
 /*--------------------------------------------------------------*/
@@ -96,6 +81,7 @@ p {
 }
 
 .btn {
+  margin: 80px 10px 10px 280px;
   top: 0;
   left: 0;
   transition: all 0.15s linear 0s;
@@ -105,7 +91,7 @@ p {
   background-color: #ffe800;
   text-transform: uppercase;
   color: #404040;
-  font-family: arial;
+  font-family: 'VT323', monospace;
   letter-spacing: 1px;
   box-shadow: -6px 6px 0 #404040;
   text-decoration: none;
