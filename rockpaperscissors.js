@@ -64,9 +64,11 @@ function playRound(pSelection, cSelection) {
 
   if (playerScore == 5) {
     document.getElementById('player-score').innerHTML = 'PLAYER WINS!';
+    document.getElementById('player-score').style.fontSize = '40px';
     document.getElementById('comp-score').style.display = 'none';
   } else if (computerScore == 5) {
     document.getElementById('comp-score').innerHTML = 'COMPUTER WINS!';
+    document.getElementById('comp-score').style.fontSize = '40px';
     document.getElementById('player-score').style.display = 'none';
   }
 
@@ -133,10 +135,13 @@ function rps() {
 
 function reset() {
   //clear screen first
-  document.getElementById(previousPlayerMove).style.display = 'none';
+  console.log(previousComputerMove + ' ' + previousPlayerMove);
+  document.getElementById(previousPlayerMove).style.display = 'none'; //change whats in brackets
   document.getElementById(previousComputerMove).style.display = 'none';
 
   //reset scores
+  document.getElementById('player-score').style.fontSize = '20px';
+  document.getElementById('comp-score').style.fontSize = '20px';
   document.getElementById('player-score').style.display = 'inline';
   document.getElementById('player-score').innerHTML = 'Player: 0';
   document.getElementById('comp-score').style.display = 'inline';

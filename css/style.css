@@ -1,16 +1,23 @@
 body {
-  background-color: #4c69f6;
+  background-image: url('/images/5449081.jpg');
+  background-repeat: no-repeat;
+  background-size: 108% 108%;
   color: #5d5d5d;
   margin: auto;
-  width: 50%;
+  max-width: 60%;
 }
 
 #game-name {
-  font-family: 'VT323', monospace;
+  font-family: 'Bangers', cursive;
   text-align: center;
-  color: black;
-  font-size: 50px;
+  -webkit-text-stroke: 2px black;
+  color: #f4eeeb;
+  font-size: 70px;
   animation: pulse 5s, glow 15s infinite;
+}
+
+.content {
+  margin: 110px 0px 0px 50px;
 }
 
 .screen-div {
@@ -50,7 +57,7 @@ body {
 .score {
   margin: 100px;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'VT323', monospace;
 }
 
@@ -76,21 +83,25 @@ body {
 
 @keyframes glow {
   50% {
-    text-shadow: 5px 5px 10px #ffc510;
+    text-shadow: 10px 10px 10px #f28a2e;
   }
 }
 
+.container {
+  max-width: 100%;
+}
+
 .btn {
-  margin: 80px 10px 10px 280px;
+  margin: 40px 10px 10px 380px;
   top: 0;
   left: 0;
   transition: all 0.15s linear 0s;
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-  background-color: #ffe800;
+  background-color: #262320; /*#ffe800;*/
   text-transform: uppercase;
-  color: #404040;
+  color: #f4eeeb;
   font-family: 'VT323', monospace;
   letter-spacing: 1px;
   box-shadow: -6px 6px 0 #404040;
