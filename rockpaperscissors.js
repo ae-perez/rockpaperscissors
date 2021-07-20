@@ -20,6 +20,7 @@ var playerScore = 0,
   computerScore = 0;
 var previousPlayerMove = 'empty';
 var previousComputerMove = 'empty';
+var computerSelection = computerPlay();
 
 function playRound(pSelection, cSelection) {
   // ***** for this section maybe instead of string return a value so you can keep score
@@ -88,11 +89,10 @@ function game(playerSelection) {
   console.log('starting the game ....');
 
   //initialize variables
-  var computerSelection = computerPlay();
+  //var computerSelection = computerPlay();
   var player = 'player-' + playerSelection,
     comp = 'comp-' + computerSelection; //used for changing html
   var winner = false;
-  var firstGame = true;
 
   //check to see if there is a winner
   if (playerScore == 5 || computerScore == 5) {
@@ -113,6 +113,7 @@ function game(playerSelection) {
 }
 
 function rps() {
+  console.log('HELLLLOOOOOO!???????');
   var rock = document.getElementById('rock');
   var paper = document.getElementById('paper');
   var scissors = document.getElementById('scissors');
