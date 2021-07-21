@@ -21,6 +21,24 @@ var playerScore = 0,
 var previousPlayerMove = 'empty';
 var previousComputerMove = 'empty';
 var computerSelection = computerPlay();
+var rock = document.getElementById('rock');
+var paper = document.getElementById('paper');
+var scissors = document.getElementById('scissors');
+
+rock.addEventListener('click', function () {
+  var playerSelection = 'rock';
+  game(playerSelection);
+});
+
+paper.addEventListener('click', function () {
+  var playerSelection = 'paper';
+  game(playerSelection);
+});
+
+scissors.addEventListener('click', function () {
+  var playerSelection = 'scissors';
+  game(playerSelection);
+});
 
 function playRound(pSelection, cSelection) {
   // ***** for this section maybe instead of string return a value so you can keep score
@@ -110,28 +128,6 @@ function game(playerSelection) {
     previousPlayerMove = player;
     previousComputerMove = comp;
   }
-}
-
-function rps() {
-  console.log('HELLLLOOOOOO!???????');
-  var rock = document.getElementById('rock');
-  var paper = document.getElementById('paper');
-  var scissors = document.getElementById('scissors');
-
-  rock.onclick = function () {
-    var playerSelection = 'rock';
-    game(playerSelection);
-  };
-
-  paper.onclick = function () {
-    var playerSelection = 'paper';
-    game(playerSelection);
-  };
-
-  scissors.onclick = function () {
-    var playerSelection = 'scissors';
-    game(playerSelection);
-  };
 }
 
 function reset() {
