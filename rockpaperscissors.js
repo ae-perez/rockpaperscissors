@@ -20,7 +20,6 @@ var playerScore = 0,
   computerScore = 0;
 var previousPlayerMove = 'empty';
 var previousComputerMove = 'empty';
-var computerSelection = computerPlay();
 var rock = document.getElementById('rock');
 var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
@@ -44,40 +43,40 @@ function playRound(pSelection, cSelection) {
   // ***** for this section maybe instead of string return a value so you can keep score
 
   if (pSelection == 'rock' && cSelection == 'paper') {
-    console.log('You Lose! Paper beats rock!'); //delete this after
+    //console.log('You Lose! Paper beats rock!'); //delete this after
     computerScore++;
     document.getElementById(
       'comp-score'
     ).innerHTML = `Computer: ${computerScore}`;
   } else if (pSelection == 'rock' && cSelection == 'scissors') {
-    console.log('You Win! Rock beats Scissors.'); //delete this after
+    //console.log('You Win! Rock beats Scissors.'); //delete this after
     playerScore++;
     document.getElementById(
       'player-score'
     ).innerHTML = `Player: ${playerScore}`;
   } else if (pSelection == 'paper' && cSelection == 'rock') {
-    console.log('You Win! Paper beats Rock.'); //delete this after
+    //console.log('You Win! Paper beats Rock.'); //delete this after
     playerScore++;
     document.getElementById(
       'player-score'
     ).innerHTML = `Player: ${playerScore}`;
   } else if (pSelection == 'paper' && cSelection == 'scissors') {
-    console.log('You Lose! Scissors beats Paper.'); //delete this after
+    //console.log('You Lose! Scissors beats Paper.'); //delete this after
     computerScore++;
     document.getElementById(
       'comp-score'
     ).innerHTML = `Computer: ${computerScore}`;
   } else if (pSelection == 'scissors' && cSelection == 'rock') {
-    console.log('You Lose! Rock beats Scissors.'); //delete this after
+    //console.log('You Lose! Rock beats Scissors.'); //delete this after
     computerScore++;
     document.getElementById(
       'comp-score'
     ).innerHTML = `Computer: ${computerScore}`;
   } else if (pSelection == 'scissors' && cSelection == 'paper') {
-    console.log('You Lose! Scissors beats Paper.'); //delete this after
+    //console.log('You Lose! Scissors beats Paper.'); //delete this after
     computerScore++;
   } else {
-    console.log('Draw!');
+    //console.log('Draw!');
     score = 'draw';
   }
 
@@ -90,10 +89,6 @@ function playRound(pSelection, cSelection) {
     document.getElementById('comp-score').style.fontSize = '40px';
     document.getElementById('player-score').style.display = 'none';
   }
-
-  console.log(
-    `this is players score: ${playerScore} and this is computers score: ${computerScore}`
-  );
 }
 
 function computerPlay() {
@@ -104,10 +99,10 @@ function computerPlay() {
 }
 
 function game(playerSelection) {
-  console.log('starting the game ....');
+  //console.log('starting the game ....');
 
   //initialize variables
-  //var computerSelection = computerPlay();
+  var computerSelection = computerPlay();
   var player = 'player-' + playerSelection,
     comp = 'comp-' + computerSelection; //used for changing html
   var winner = false;
@@ -116,9 +111,8 @@ function game(playerSelection) {
   if (playerScore == 5 || computerScore == 5) {
     winner = true;
     console.log('GAME OVER!');
-  } /*if (!winner)*/ else {
+  } else {
     if (previousPlayerMove !== 'empty') {
-      console.log('this is not empty!');
       document.getElementById(previousPlayerMove).style.display = 'none';
       document.getElementById(previousComputerMove).style.display = 'none';
     }
@@ -132,7 +126,6 @@ function game(playerSelection) {
 
 function reset() {
   //clear screen first
-  console.log(previousComputerMove + ' ' + previousPlayerMove);
   document.getElementById(previousPlayerMove).style.display = 'none'; //change whats in brackets
   document.getElementById(previousComputerMove).style.display = 'none';
 

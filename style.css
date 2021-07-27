@@ -1,10 +1,28 @@
+/*
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+*/
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 body {
   background-image: url('5449081.jpg');
   background-repeat: no-repeat;
-  background-size: 108% 108%;
+  background-size: 100% 100%;
   color: #5d5d5d;
   margin: auto;
   max-width: 60%;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 #game-name {
@@ -70,25 +88,13 @@ body {
   height: 55px;
 }
 
-/*--------------------------------------------------------------*/
-
-@keyframes pulse {
-  0% {
-    color: #4c69f6;
-  }
-  100% {
-    color: #5d5d5d;
-  }
-}
-
-@keyframes glow {
-  50% {
-    text-shadow: 10px 10px 10px #f28a2e;
-  }
-}
-
 .container {
-  max-width: 100%;
+  background-color: black;
+  position: absolute;
+  left: 25%;
+  bottom: 2%;
+  margin-left: -10px;
+  margin-top: -10px;
 }
 
 .btn {
@@ -164,4 +170,21 @@ a:active.btn:before {
 a:active.btn:after {
   top: 1px;
   left: 1px;
+}
+
+/*--------------------------------------------------------------*/
+
+@keyframes pulse {
+  0% {
+    color: #4c69f6;
+  }
+  100% {
+    color: #5d5d5d;
+  }
+}
+
+@keyframes glow {
+  50% {
+    text-shadow: 10px 10px 10px #f28a2e;
+  }
 }
