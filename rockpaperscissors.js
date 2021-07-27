@@ -82,11 +82,11 @@ function playRound(pSelection, cSelection) {
 
   if (playerScore == 5) {
     document.getElementById('player-score').innerHTML = 'PLAYER WINS!';
-    document.getElementById('player-score').style.fontSize = '40px';
+    document.getElementById('player-score').style.fontSize = '30px';
     document.getElementById('comp-score').style.display = 'none';
   } else if (computerScore == 5) {
     document.getElementById('comp-score').innerHTML = 'COMPUTER WINS!';
-    document.getElementById('comp-score').style.fontSize = '40px';
+    document.getElementById('comp-score').style.fontSize = '30px';
     document.getElementById('player-score').style.display = 'none';
   }
 }
